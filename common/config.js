@@ -1,7 +1,7 @@
 /*
     author     : bak chulhyong
     created    : 2018 - 09 - 12
-    modified   : 2018 - 09 - 16
+    modified   : 2018 - 09 - 20
     description: config file
 */
 module.exports.config = {
@@ -15,7 +15,7 @@ module.exports.config = {
         "user"              : 'bb199af2d42a06'                  ,
         "password"          : 'c2495206213a2fe'                 ,
         "database"          : 'heroku_8dc2d6c2cd1cfdb'          ,
-        "connectionLimit"   : 1                                 ,
+        "connectionLimit"   : 0                                 ,
         "waitForConnections": true                              ,
         "queueLimit"        : 0                                 ,
     }                            ,
