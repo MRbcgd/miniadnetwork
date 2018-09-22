@@ -2,7 +2,7 @@ function getBanner ( ) {
     var ctt_key  = ( document.getElementById('ctt_key')  || {} );
     var art_kind = ( document.getElementById('art_kind') || {} );
 
-    var url = 'http://localhost:8080/advert/htmlBanner/getBanner';
+    var url = 'https://miniadnetwork-core-staging.herokuapp.com/advert/htmlBanner/getBanner';
     var self = {};
     self.ctt_key  = ctt_key.value  || null ;
     self.art_kind = art_kind.value || null;
