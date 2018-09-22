@@ -24,6 +24,13 @@ function getList ( req, res ) {
     return;
 }
 function selContentList ( req, res ) {
+    try {
+        JSON.parse(req.body)
+    } catch (e) {
+        EQUIP.returnClient('INVALID_INPUT_DATA', res, null);
+        return;
+    }
+    
     var data        = JSON.parse(req.body);
     var self        = this;
 
@@ -47,7 +54,7 @@ function selContentList ( req, res ) {
                 return;
             }
         }
-        
+
         EQUIP.returnClient('SUCCESS', res, rows);
         return;
     });

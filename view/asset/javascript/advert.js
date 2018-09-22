@@ -4,7 +4,12 @@ function getAdvertList ( adv_status ) {
     self.adv_status = ( adv_status || null );
 
     reqXHttp('POST', url, self, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
 
         if ( result.code == 1000 ) {
             var adv_tbody = ( document.getElementById('adv_tbody') || null );
@@ -74,7 +79,13 @@ function addAdvert () {
         return;
     }
     reqXHttp('POST', url, self, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
+
         if ( result.code == 1000 ) {
             location.href = '/';
         } else {
@@ -89,9 +100,14 @@ function getTargetList () {
     var tgt_age    = ( document.getElementById('tgt_age')    || null );
 
     reqXHttp('POST', url, {}, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
 
-        if ( tgt_gender == null && tgt_age == null ) {
+        if ( tgt_gender == null || tgt_age == null ) {
             console.log("[Error]: Check Object Status");
             return;
         }

@@ -1,7 +1,7 @@
 /*
     author     : bak chulhyong
     created    : 2018 - 09 - 13
-    modified   : 2018 - 09 - 17
+    modified   : 2018 - 09 - 22
     description: javascript functions
 */
 const fs = require('fs');
@@ -17,6 +17,7 @@ module.exports.FC_LIST = {
     "common" : getCommon ,
     "advert" : getAdvert ,
     "content": getContent,
+    "sample" : getSample ,
 }
 // main page
 function getMain ( req, res ) {
@@ -39,6 +40,12 @@ function getAdvert ( req, res ) {
 }
 function getContent ( req, res ) {
     var dir = ASST_DIR + 'javascript/content.js';
+
+    EQUIP.writePage(dir, 'text/javascript', res);
+    return;
+}
+function getSample ( req, res ) {
+    var dir = ASST_DIR + 'javascript/sample.js';
 
     EQUIP.writePage(dir, 'text/javascript', res);
     return;

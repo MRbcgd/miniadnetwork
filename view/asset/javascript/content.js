@@ -4,7 +4,12 @@ function getContentList ( ctt_status ) {
     self.ctt_status = ( ctt_status || null );
 
     reqXHttp('POST', url, self, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
 
         if ( result.code == 1000 ) {
             var ctt_tbody = ( document.getElementById('ctt_tbody') || null );
@@ -70,7 +75,13 @@ function addContent () {
     }
 
     reqXHttp('POST', url, self, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
+
         if ( result.code == 1000 ) {
             location.href = '/';
         } else {
@@ -85,9 +96,14 @@ function getTargetList () {
     var tgt_age    = ( document.getElementById('tgt_age')    || null );
 
     reqXHttp('POST', url, {}, function ( result ) {
-        result = JSON.parse(result);
+        try {
+            result = JSON.parse(result);
+        } catch (e) {
+            alert("Check Input Data!");
+            return;
+        }
 
-        if ( tgt_gender == null && tgt_age == null ) {
+        if ( tgt_gender == null || tgt_age == null ) {
             alert("[Error]: Check Object Status");
             return;
         }
