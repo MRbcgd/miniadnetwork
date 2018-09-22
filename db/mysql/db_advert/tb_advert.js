@@ -1,7 +1,7 @@
 /*
     author     : bak chulhyong
     created    : 2018 - 09 - 16
-    modified   : 2018 - 09 - 20
+    modified   : 2018 - 09 - 22
     description: advert
 */
 const MYSQL = require('./mysql.js');
@@ -18,7 +18,7 @@ module.exports.selAdvert = function ( dbconn, owner, adv_status ) {
                  + ", adv_status "
                  + ", adv_created "
                  + ", adv_updated "
-                 + ", used_point "
+                 + ", adv_exposed "
                  + ", TGLSG.tgl_code gender_code "
                  + ", TGLSA.tgl_code age_code "
               + "FROM tbAAdvert ADV "

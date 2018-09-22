@@ -47,8 +47,8 @@ function isByteLength ( str, length ) {
     return false;
 }
 function dateFormat ( date ) {
+    if ( date == null ) return '';
     date = new Date(date);
-    if ( (date instanceof Date) == false ) return null;
 
     var full_year    = date.getFullYear();
     var full_month   = ('0' + (date.getMonth() + 1)).slice(-2);

@@ -18,7 +18,6 @@ function getAdvertList ( adv_status ) {
             var record = null;
             for (var rows = 0; rows < data.length; rows++) {
                 record = data[rows];
-
                 adv_tbody.innerHTML += "<tr>"
                                         + "<td>" + record['adv_idx']                 + "</td>"
                                         + "<td>" + record['adv_owner']               + "</td>"
@@ -28,7 +27,7 @@ function getAdvertList ( adv_status ) {
                                         + "<td>" + record['adv_status']              + "</td>"
                                         + "<td>" + dateFormat(record['adv_created']) + "</td>"
                                         + "<td>" + dateFormat(record['adv_updated']) + "</td>"
-                                        + "<td>" + record['used_point']              + "</td>"
+                                        + "<td>" + dateFormat(record['adv_exposed']) + "</td>"
                                         + "<td>" + record['gender_code']             + "</td>"
                                         + "<td>" + record['age_code']                + "</td>"
                                     + "</tr>"

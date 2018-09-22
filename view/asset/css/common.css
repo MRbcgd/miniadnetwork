@@ -44,16 +44,12 @@ td {
     width:10%;
 
 }
-/* content mini_point */
+/* target gender */
 #ctt_table th:nth-child(9) {
     width:5%;
 }
-/* target gender */
-#ctt_table th:nth-child(10) {
-    width:5%;
-}
 /* target age */
-#ctt_table th:nth-child(11) {
+#ctt_table th:nth-child(10) {
     width:5%;
 }
 
@@ -91,7 +87,7 @@ td {
 #adv_table th:nth-child(8) {
     width:10%;
 }
-/* advert used point */
+/* advert exposed */
 #adv_table th:nth-child(9) {
     width:5%;
 }

@@ -17,7 +17,6 @@ module.exports.selContent = function ( dbconn, owner, ctt_status ) {
                  + ", ctt_status "
                  + ", ctt_created "
                  + ", ctt_updated "
-                 + ", mini_point "
                  + ", TGLSG.tgl_code gender_code "
                  + ", TGLSA.tgl_code age_code "
               + "FROM tbAContent CTT "
