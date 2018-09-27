@@ -47,34 +47,34 @@ function getAdvertList ( adv_status ) {
 function addAdvert () {
     var url = '/advert/regist/add';
     var self = {};
-    self.adv_owner  = ( document.getElementById('adv_owner')  || {} ).value;
-    self.email      = ( document.getElementById('email')      || {} ).value;
-    self.adv_desc   = ( document.getElementById('adv_desc')   || {} ).value;
-    self.adv_link   = ( document.getElementById('adv_link')   || {} ).value;
-    self.tgt_gender = ( document.getElementById('tgt_gender') || {} ).value;
-    self.tgt_age    = ( document.getElementById('tgt_age')    || {} ).value;
+    self.adv_owner  = ( document.getElementById('adv_owner')  || {} ).value || null;
+    self.email      = ( document.getElementById('email')      || {} ).value || null;
+    self.adv_desc   = ( document.getElementById('adv_desc')   || {} ).value || null;
+    self.adv_link   = ( document.getElementById('adv_link')   || {} ).value || null;
+    self.tgt_gender = ( document.getElementById('tgt_gender') || {} ).value || null;
+    self.tgt_age    = ( document.getElementById('tgt_age')    || {} ).value || null;
 
-    if ( isByteLength(self.adv_owner, 64) == false ) {
+    if ( self.adv_owner == null || isByteLength(self.adv_owner, 64) == false ) {
         alert("Check Advertiser");
         return;
     }
-    if ( isByteLength(self.email, 64) == false ) {
+    if ( self.email == null || isByteLength(self.email, 64) == false ) {
         alert("Check Email");
         return;
     }
-    if ( isByteLength(self.adv_desc, 128) == false ) {
+    if ( self.adv_desc == null || isByteLength(self.adv_desc, 128) == false ) {
         alert("Check Advertising slogan");
         return;
     }
-    if ( isByteLength(self.adv_link, 512) == false ) {
+    if ( self.adv_link == null || isByteLength(self.adv_link, 512) == false ) {
         alert("Check Advertising Link");
         return;
     }
-    if ( isByteLength(self.tgt_gender, 64) == false ) {
+    if ( self.tgt_gender == null || isByteLength(self.tgt_gender, 64) == false ) {
         alert("Check Gender");
         return;
     }
-    if ( isByteLength(self.tgt_age, 64) == false ) {
+    if ( self.tgt_age == null || isByteLength(self.tgt_age, 64) == false ) {
         alert("Check Age");
         return;
     }

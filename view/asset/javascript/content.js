@@ -47,29 +47,29 @@ function getContentList ( ctt_status ) {
 function addContent () {
     var url = '/content/regist/add';
     var self = {};
-    self.ctt_name   = ( document.getElementById('ctt_name')   || {} ).value;
-    self.ctt_owner  = ( document.getElementById('ctt_owner')  || {} ).value;
-    self.email      = ( document.getElementById('email')      || {} ).value;
-    self.tgt_gender = ( document.getElementById('tgt_gender') || {} ).value;
-    self.tgt_age    = ( document.getElementById('tgt_age')    || {} ).value;
+    self.ctt_name   = ( document.getElementById('ctt_name')   || {} ).value || null;
+    self.ctt_owner  = ( document.getElementById('ctt_owner')  || {} ).value || null;
+    self.email      = ( document.getElementById('email')      || {} ).value || null;
+    self.tgt_gender = ( document.getElementById('tgt_gender') || {} ).value || null;
+    self.tgt_age    = ( document.getElementById('tgt_age')    || {} ).value || null;
 
-    if ( isByteLength(self.ctt_name, 64) == false ) {
+    if ( self.ctt_name == null || isByteLength(self.ctt_name, 64) == false ) {
         alert("Check Content Name");
         return;
     }
-    if ( isByteLength(self.ctt_owner, 64) == false ) {
+    if ( self.ctt_owner == null ||  isByteLength(self.ctt_owner, 64) == false ) {
         alert("Check Content Owner");
         return;
     }
-    if ( isByteLength(self.email, 64) == false ) {
+    if ( self.email == null ||  isByteLength(self.email, 64) == false ) {
         alert("Check Email");
         return;
     }
-    if ( isByteLength(self.tgt_gender, 2) == false ) {
+    if ( self.tgt_gender == null ||  isByteLength(self.tgt_gender, 2) == false ) {
         alert("Check Gender");
         return;
     }
-    if ( isByteLength(self.tgt_age, 2) == false ) {
+    if ( self.tgt_age == null ||  isByteLength(self.tgt_age, 2) == false ) {
         alert("Check Age");
         return;
     }

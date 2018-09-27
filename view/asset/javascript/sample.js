@@ -35,6 +35,10 @@ function getBanner ( ) {
 
             sam_ban_akd1.innerHTML = data;
         } else {
+            if ( result.code == 1200 ) {
+                alert('Invalid ContentKey!');
+                return;
+            }
             alert('[Error]:' + result.code);
         }
         return;

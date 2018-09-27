@@ -221,8 +221,14 @@ input[type=text]:focus{
 }
 
 /*tables*/
-table {
+.wrap {
     width: 100%;
+    height: 600px;
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+table {
+    width: 1500px;
     table-layout: fixed;
 }
 td {
@@ -239,11 +245,11 @@ td {
 }
 /* content key */
 #ctt_table th:nth-child(2) {
-    width:20%;
+    width:25%;
 }
 /* content name */
 #ctt_table th:nth-child(3) {
-    width:15%;
+    width:20%;
 }
 /* content owner */
 #ctt_table th:nth-child(4) {
@@ -251,11 +257,11 @@ td {
 }
 /* conntent email */
 #ctt_table th:nth-child(5) {
-    width:13%;
+    width:16%;
 }
 /* content status */
 #ctt_table th:nth-child(6) {
-    width:3%;
+    width:5%;
 }
 /* content created */
 #ctt_table th:nth-child(7) {
@@ -303,21 +309,21 @@ td {
 }
 /* advert created */
 #adv_table th:nth-child(7) {
-    width:10%;
+    width:9%;
 }
 /* advert updated */
 #adv_table th:nth-child(8) {
-    width:10%;
+    width:9%;
 }
 /* advert exposed */
 #adv_table th:nth-child(9) {
-    width:5%;
+    width:9%;
 }
 /* target gender */
 #adv_table th:nth-child(10) {
-    width:5%;
+    width:4%;
 }
 /* target age */
 #adv_table th:nth-child(11) {
-    width:5%;
+    width:4%;
 }
