@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
     <head>
-        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sample</title>
+        <link rel="stylesheet" href="/asset/css/common">
     </head>
     <body>
-        <div class="">
-            <a href="/">Home</a><br><br>
+        <div class="icon-home" onclick="getPage();">
+            <div class="home-body" style="background-color: dodgerBlue"></div>
+            <div class="home-roof-cut-left"></div>
+            <div class="home-roof-cut-right"></div>
+            <div class="home-door"></div>
+            <div class="home-chimney" style="background-color: dodgerBlue"></div>
+            <div class="home-roof-container">
+                <div class="home-roof-left" style="background-color: dodgerBlue"></div>
+                <div class="home-roof-right" style="background-color: dodgerBlue"></div>
+            </div>
+        </div>
+
+        <div class="" align="center">
             <b>Sample</b>
         </div>
         <div class="">
-            <button type="button" name="button" onclick="getPage('sample/banner')">banner</button><br>
+            <button class="btn_dft" type="button" name="button" onclick="getPage('sample/banner')">banner</button><br>
         </div>
         <script src="/asset/javascript/common"></script>
     </body>

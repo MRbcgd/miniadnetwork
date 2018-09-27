@@ -1,3 +1,225 @@
+/*page*/
+body {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+
+}
+/*select*/
+select {
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 2px solid #aaa;
+   border-radius: 4px;
+   color: #555;
+   font-size: inherit;
+   margin: 8px 0px 8px 0px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 100%;
+}
+/*input*/
+input[type=text]{
+  width:100%;
+  border:2px solid #aaa;
+  border-radius:4px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon input[type=text]{
+  padding-left:40px;
+}
+
+.inputWithIcon{
+  position:relative;
+}
+
+.inputWithIcon i{
+  position:absolute;
+  left:0;
+  top:8px;
+  padding:9px 8px;
+  color:#aaa;
+  transition:.3s;
+}
+
+.inputWithIcon input[type=text]:focus + i{
+  color:dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i{
+  background-color:#aaa;
+  color:#fff;
+  padding:9px 4px;
+  border-radius:4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type=text]:focus + i{
+  color:#fff;
+  background-color:dodgerBlue;
+}
+/*home*/
+.icon-home {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.icon-home .home-chimney {
+  width: 12%;
+  height: 18%;
+  position: absolute;
+  left: 20%;
+  top: 21%;
+  background-color: #000;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.icon-home .home-roof-container {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  margin-left: -30%;
+  top: 20%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.icon-home .home-roof-left {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  left: -84%;
+}
+
+.icon-home .home-roof-right {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  top: -84%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.icon-home .home-body {
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  margin-left: -30%;
+  bottom: 10%;
+  background-color: #000;
+}
+
+.icon-home .home-roof-cut-left {
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  left: -8%;
+  bottom: 55%;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.icon-home .home-roof-cut-right {
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  right: -8%;
+  bottom: 55%;
+  background-color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.icon-home .home-door {
+  width: 22%;
+  height: 38%;
+  position: absolute;
+  left: 50%;
+  margin-left: -11%;
+  bottom: 00%;
+  background-color: #ffffff;
+  border-radius: 15%;
+}
+
+/*button*/
+.btn_dft,
+.btn_dft::after {
+  width: 300px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn_dft {
+  border: 3px solid #fff;
+  border-radius: 5px;
+  display: block;
+  font-weight: bold;
+  margin: 1em auto;
+  padding: 2em 6em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn_dft::before,
+.btn_dft::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.btn_dft:hover {
+  color: #ffffff;
+}
+.btn_dft:hover:after {
+    height: 100%;
+}
+
 /*tables*/
 table {
     width: 100%;
