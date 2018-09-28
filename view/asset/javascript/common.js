@@ -1,5 +1,5 @@
 function getPage ( page ) {
-    location.href = '/' + page;
+    location.href = '/' + ( page || '' );
     return;
 }
 function reqXHttp ( method, url, data, callback ) {
