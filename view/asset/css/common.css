@@ -223,107 +223,118 @@ input[type=text]:focus{
 /*tables*/
 .wrap {
     width: 100%;
-    height: 600px;
+    height: 500px;
     overflow-x: scroll;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 table {
     width: 1500px;
     table-layout: fixed;
 }
+thead {
+    background-color: #D3D3D3;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+tbody {
+    display:block;
+    height: 600px;
+    overflow:auto;
+    overflow-y: scroll;
+}
 td {
     text-align: center;
-    /* overflow: hidden; */
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
 }
 /* content */
 /* index */
-#ctt_table th:nth-child(1) {
+#ctt_table th:nth-child(1) td:nth-child(1) {
     width:4%;
 }
 /* content key */
-#ctt_table th:nth-child(2) {
+#ctt_table th:nth-child(2) td:nth-child(2) {
     width:25%;
 }
 /* content name */
-#ctt_table th:nth-child(3) {
+#ctt_table th:nth-child(3) td:nth-child(3) {
     width:20%;
 }
 /* content owner */
-#ctt_table th:nth-child(4) {
+#ctt_table th:nth-child(4) td:nth-child(4) {
     width:10%;
 }
 /* conntent email */
-#ctt_table th:nth-child(5) {
+#ctt_table th:nth-child(5) td:nth-child(5) {
     width:16%;
 }
 /* content status */
-#ctt_table th:nth-child(6) {
+#ctt_table th:nth-child(6) td:nth-child(6) {
     width:5%;
 }
 /* content created */
-#ctt_table th:nth-child(7) {
+#ctt_table th:nth-child(7) td:nth-child(7) {
     width:10%;
 }
 /* content updated */
-#ctt_table th:nth-child(8) {
+#ctt_table th:nth-child(8) td:nth-child(8) {
     width:10%;
-
 }
 /* target gender */
-#ctt_table th:nth-child(9) {
+#ctt_table th:nth-child(9) td:nth-child(9) {
     width:5%;
 }
 /* target age */
-#ctt_table th:nth-child(10) {
+#ctt_table th:nth-child(10) td:nth-child(10) {
     width:5%;
 }
-
 
 /* advert */
 /* index */
-#adv_table th:nth-child(1) {
+#adv_table th:nth-child(1) td:nth-child(1) {
     width:4%;
 }
 /* advertiser */
-#adv_table th:nth-child(2) {
+#adv_table th:nth-child(2) td:nth-child(2) {
     width:10%;
 }
 /* advertiser email */
-#adv_table th:nth-child(3) {
+#adv_table th:nth-child(3) td:nth-child(3) {
     width:13%;
 }
 /* advert slogan */
-#adv_table th:nth-child(4) {
+#adv_table th:nth-child(4) td:nth-child(4) {
     width:17%;
 }
 /* advert link */
-#adv_table th:nth-child(5) {
+#adv_table th:nth-child(5) td:nth-child(5) {
     width:18%;
 }
 /* advert status */
-#adv_table th:nth-child(6) {
+#adv_table th:nth-child(6) td:nth-child(6) {
     width:3%;
 }
 /* advert created */
-#adv_table th:nth-child(7) {
+#adv_table th:nth-child(7) td:nth-child(7) {
     width:9%;
 }
 /* advert updated */
-#adv_table th:nth-child(8) {
+#adv_table th:nth-child(8) td:nth-child(8) {
     width:9%;
 }
 /* advert exposed */
-#adv_table th:nth-child(9) {
+#adv_table th:nth-child(9) td:nth-child(9) {
     width:9%;
 }
 /* target gender */
-#adv_table th:nth-child(10) {
+#adv_table th:nth-child(10) td:nth-child(10) {
     width:4%;
 }
 /* target age */
-#adv_table th:nth-child(11) {
+#adv_table th:nth-child(11) td:nth-child(11) {
     width:4%;
 }
