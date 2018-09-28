@@ -6,6 +6,15 @@ body {
     padding: 10px;
 
 }
+/*scroll*/
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: dodgerBlue;
+}
 /*select*/
 select {
    -webkit-appearance: button;
