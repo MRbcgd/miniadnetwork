@@ -241,7 +241,7 @@ thead, tbody tr {
 }
 tbody {
     display:block;
-    height: 600px;
+    height: 400px;
     overflow:auto;
     overflow-y: inherit;
 }
